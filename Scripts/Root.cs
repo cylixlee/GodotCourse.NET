@@ -5,32 +5,29 @@ public partial class Root : Node
     public override void _Process(double delta)
     {
         base._Process(delta);
-        // if (Input.IsKeyPressed(Key.A))
-        // {
-        //     GD.Print("[A] pressed");
-        // }
-    }
-
-    public override void _Input(InputEvent @event)
-    {
-        base._Input(@event);
-        if (@event is InputEventKey key)
+        if (Input.IsActionJustPressed("Jump"))
         {
-            if (key.Keycode == Key.A)
-            {
-                if (key.IsEcho())
-                {
-                    GD.Print("[A] echo");
-                }
-                else if (key.IsPressed())
-                {
-                    GD.Print("[A] pressed");
-                }
-                else if (key.IsReleased())
-                {
-                    GD.Print("[A] released");
-                }
-            }
+            GD.Print("<Jump> pressed");
         }
+
+        /* THIS IS NOISY! */
+        // if (Input.IsActionPressed("Jump"))
+        // {
+        //     GD.Print("<Jump> hold");
+        // }
+
+        if (Input.IsActionJustReleased("Jump"))
+        {
+            GD.Print("<Jump> released");
+        }
+
+        /* Get Action Strength */
+        // GD.Print("Action Strength: ", Input.GetActionStrength("Jump"));
+
+        /* Get Axis (Left & Right || Up & Down) */
+        // float axis = Input.GetAxis("Left", "Right");
+
+        /* Get Vector (Left & Right && Up & Down) */
+        // Vector2 vector = Input.GetVector("Left", "Right", "Up", "Down");
     }
 }
