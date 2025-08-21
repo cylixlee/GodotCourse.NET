@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // Currently, NetCoreDbg only supports `attach` to Godot.
+            //
+            // When trying to `launch` Godot, Error: 0x80004005: E_FAIL will appear. The tracking issue canbe found at
+            // https://github.com/Samsung/netcoredbg/issues/189.
+            "name": "Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}
