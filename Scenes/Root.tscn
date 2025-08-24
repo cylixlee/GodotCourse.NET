@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://d04ib1cvkueqn"]
+
+[ext_resource type="Texture2D" uid="uid://c31kblw1xobwo" path="res://icon.svg" id="1_a5hps"]
+[ext_resource type="Script" uid="uid://dswioyjruidyx" path="res://Scripts/Player.cs" id="2_kqog5"]
+
+[node name="Root" type="Node2D"]
+
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(160, 289)
+texture = ExtResource("1_a5hps")
+script = ExtResource("2_kqog5")
+
+[node name="Enemy1" type="Sprite2D" parent="." groups=["Enemy"]]
+position = Vector2(785, 131)
+texture = ExtResource("1_a5hps")
+
+[node name="Enemy2" type="Sprite2D" parent="." groups=["Enemy"]]
+position = Vector2(783, 349)
+texture = ExtResource("1_a5hps")
+
+[node name="Enemy3" type="Sprite2D" parent="." groups=["Enemy"]]
+position = Vector2(783, 532)
+texture = ExtResource("1_a5hps")
