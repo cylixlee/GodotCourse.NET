@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6yspuwuiyam3"]
+
+[ext_resource type="Texture2D" uid="uid://c31kblw1xobwo" path="res://icon.svg" id="1_dwdkg"]
+[ext_resource type="PackedScene" uid="uid://cf3cr0ge4n5xu" path="res://Scenes/Prefab.tscn" id="2_84mnc"]
+[ext_resource type="Script" uid="uid://drmp1lb7a8jpb" path="res://Scripts/SceneChanger.cs" id="2_iasf7"]
+
+[node name="Second" type="Node2D"]
+script = ExtResource("2_iasf7")
+Path = "res://Scenes/First.tscn"
+SubScene = ExtResource("2_84mnc")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(381, 288)
+texture = ExtResource("1_dwdkg")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(749, 288)
+texture = ExtResource("1_dwdkg")
