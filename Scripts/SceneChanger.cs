@@ -5,9 +5,6 @@ public partial class SceneChanger : Node
     [Export]
     public string Path;
 
-    [Export]
-    public PackedScene SubScene;
-
     public override void _PhysicsProcess(double delta)
     {
         base._PhysicsProcess(delta);
@@ -18,7 +15,7 @@ public partial class SceneChanger : Node
 
         if (Input.IsActionJustPressed("ui_cancel"))
         {
-            GetTree().CurrentScene.AddChild(SubScene.Instantiate());
+            GetNode<MyAutoload>("/root/MyAutoload").SayCount();
         }
     }
 }

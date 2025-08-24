@@ -15,6 +15,10 @@ run/main_scene="uid://cnahilp8ojmd5"
 config/features=PackedStringArray("4.4", "C#", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+MyAutoload="*res://Scripts/MyAutoload.cs"
+
 [dotnet]
 
 project/assembly_name="GodotCourse.NET"
